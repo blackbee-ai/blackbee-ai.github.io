@@ -1,7 +1,0 @@
-{
-  "name": "blackbee",
-  "short_name": "blackbee",
-  "start_url": "/",
-  "scope": "/",
-  "display": "standalone"
-}
