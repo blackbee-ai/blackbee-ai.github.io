@@ -1,0 +1,5 @@
+baseURL: https://www.blackbee.ai/
+languageCode: en-gb
+title: blackbee
+theme: Eclectic
+enableEmoji: true
