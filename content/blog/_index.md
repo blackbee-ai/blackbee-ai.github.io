@@ -8,3 +8,5 @@ menu:
     name: Blog
     weight: 1
 ---
+
+![](blog.jpg)
