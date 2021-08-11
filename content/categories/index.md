@@ -7,3 +7,5 @@ menu:
 ---
 
 Here are the various categories of content we have at blackbee.ai.
+
+{{<divider>}}
