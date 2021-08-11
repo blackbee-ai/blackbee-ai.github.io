@@ -6,7 +6,10 @@ footer:
   - title: Recent Blog Posts
     recents: blog
     recentCount: 7
+  - title: Important Links
+    menu: true
   - title: Contact Us
     contact: true
 recent_posts:
   enable: true
+  
