@@ -151,7 +151,7 @@ body {
     margin: 15px;
     box-sizing: border-box;
     padding: 10px;
-    border: 1px solid #71B180;
+    border: 1px solid #6FCAF3;
     display: inline-block;
   }
   
@@ -172,7 +172,7 @@ body {
   details summary {
     display: block;
     cursor: pointer;
-    color: #71B180;
+    color: #6FCAF3;
   }
   
   details summary::-webkit-details-marker {

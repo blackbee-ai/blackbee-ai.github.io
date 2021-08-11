@@ -21,7 +21,7 @@ menu:                                         # Menu placement
       url: /contact
       weight: 2
 params:                                       # Theme specific parameters
-  color: "#71B180"
+  color: "#6FCAF3"
   copyright: "Copyright &copy; 2021 Blackbee. All Rights Reserved."
   footer:
     - title: About
