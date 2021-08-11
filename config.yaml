@@ -8,7 +8,7 @@ author:                                       # Information about the website au
   name: "Blackbee"
   location: Antwerp, Belgium
 #  phone: +32 475 82 18 04
-  hours: "**Mon-Fri:** 9:00AM - 6:00PM, CET"
+  hours: "**Mon-Fri:** 9:00AM - 5:00PM, CET"
 
 menu:                                         # Menu placement
   main:                                       #    - Name of the menu
