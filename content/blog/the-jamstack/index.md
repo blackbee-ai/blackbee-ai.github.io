@@ -1,5 +1,4 @@
 ---
-title: The Jamstack
 tags: [web]
 categories: [architecture]
 ---
