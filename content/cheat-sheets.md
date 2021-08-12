@@ -1,4 +1,5 @@
 ---
+title: Cheat sheets
 menu:
   main:
     name: Cheat Sheets

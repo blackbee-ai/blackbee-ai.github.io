@@ -1,7 +1,8 @@
 ---
+title: Links
 menu:
   main:
-    name: Interesting Links
+    name: links
     identifier: links
     weight: 4
 ---
