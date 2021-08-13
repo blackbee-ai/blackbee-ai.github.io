@@ -9,6 +9,12 @@
 </head>
 
 <body class="{{block "bodyClass" .}}page{{end}}">
+  {{block "header" .}}
+  <header>
+    <a href="/"><img src="/image/logo.svg" width="60px"></a>
+    {{ partial "menu.html" site.Menus.main }}
+  </header>
+  {{ end }}
   {{block "body" .}}
   <section>
     <main>
@@ -19,13 +25,7 @@
   {{end}}
   {{block "footer" .}}
   <footer>
-    <nav>
-      <ul>
-        {{ range site.Menus.footer }}
-        <li><a href="{{.URL}}">{{.Name | humanize}}</a></li>
-        {{ end }}
-      </ul>
-    </nav>
+    {{ partial "menu.html" site.Menus.footer }}
     <br>
     {{.Param "copyright" | markdownify}}
   </footer>
