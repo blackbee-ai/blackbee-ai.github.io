@@ -1,49 +1,43 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="./index.css" />
-    {{$title:= default site.Title .Page.Title}} {{with $title}}
-    <title>{{.}}</title>
-    {{end}} {{with .Page.Description}}
-    <meta name="description" content="{{.}}" />
-    {{end}}
-  </head>
-  <body>
-    <section>
-      <main>
-        <img src="./image/logo.svg" width="60px" />
-        {{with $title}}
-        <h1 class="intro">{{.}}</h1>
-        {{end}} {{with .Param "subtitle"}}
-        <h2>{{. | humanize | markdownify}}</h2>
-        {{end}} {{.Content}} {{ range site.Menus.main }}
-        <a href="{{.URL}}">{{.Name | humanize}}</a>
+{{define "body"}}
+{{$title:= default site.Title .Page.Title}}
+<section>
+  <main>
+    <img src="./image/logo.svg" width="60px">
+    {{with $title}}<h1 class="intro">{{.}}</h1>{{end}}
+    {{with .Param "subtitle"}}<h2>{{. | markdownify}}</h2>{{end}}
+    {{.Content}}
+    <nav>
+      <ul>
+        {{ range site.Menus.main }}
+        <li><a href="{{.URL}}">{{.Name | humanize}}</a></li>
         {{end}}
-      </main>
-    </section>
-    <section>
-      {{/* Recent Blog Posts */}}
-      <article>
-        <h1>Recent Blog Posts</h1>
-        <div class="posts">
-          {{ range first 3 (where (where site.RegularPages ".Section" "blog" )
-          ".Draft" false)}}
-          <div class="post">
-            <a href="{{.Permalink}}"
-              >{{default (.File.ContentBaseName | humanize | title) .Title}}</a
-            >
-            <summary>{{.Summary}}</summary>
-          </div>
-          {{end}}
-        </div>
-      </article>
-    </section>
-    <footer>
+      </ul>
+    </nav>
+  </main>
+</section>
+<section>
+  {{/* Recent Blog Posts */}}
+  <article>
+    <h1> Recent Blog Posts</h1>
+    <div class="posts">
+      {{ range first 3 (where (where site.RegularPages ".Section" "blog" ) ".Draft" false)}}
+      <div class="post">
+        <a href="{{.Permalink}}">{{default (.File.ContentBaseName | humanize | title) .Title}}</a>
+        <summary>{{.Summary}}</summary>
+      </div>
+      {{end}}
+    </div>
+  </article>
+</section>
+<footer>
+  <nav>
+    <ul>
       {{ range site.Menus.footer }}
-      <a href="{{.URL}}">{{.Name | humanize}}</a>
+      <li><a href="{{.URL}}">{{.Name | humanize}}</a></li>
       {{ end }}
-      <br />
-      {{.Param "copyright" | markdownify}}
-    </footer>
-  </body>
-</html>
+    </ul>
+  </nav>
+  <br>
+  {{.Param "copyright" | markdownify}}
+</footer>
+{{ end }}
