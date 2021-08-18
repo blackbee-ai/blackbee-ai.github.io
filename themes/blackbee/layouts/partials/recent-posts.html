@@ -4,7 +4,7 @@
       {{ $cover := .Resources.GetMatch "images/cover.jpg" }}
       {{with $cover }}
         {{ $scaled := .Fill "600x350 smart" }}
-        <img src="{{ $scaled.Permalink }}" alt="{{ with $.Page.Params.title }}{{ . }}{{ end }}" class="img-fluid">
+        <img src="{{ $scaled.Permalink }}" alt="{{ with $.Page.Params.title }}{{ . }}{{ end }}" class="img-fluid" height="auto">
       {{ end }}
       <div class="card-body p-4">
         {{ range .Params.tags }}
