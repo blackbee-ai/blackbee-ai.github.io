@@ -1,9 +1,0 @@
-{
-  "name": "blackbee.ai",
-  "short_name": "blackbee.ai",
-  "start_url": "/",
-  "scope": "/",
-  "theme_color": "#6FCAF3",
-  "background_color": "#6FCAF3",
-  "display": "standalone"
-}
