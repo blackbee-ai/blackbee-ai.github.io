@@ -4,5 +4,6 @@ title: blackbee.ai
 theme: blackbee
 enableEmoji: true
 enableGitInfo: true
+googleAnalytics: UA-205375788-1
 permalinks:
   blog: /blog/:slug/
